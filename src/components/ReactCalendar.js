@@ -50,6 +50,10 @@ const events = [
 const ReactCalendar = () => {
   const [myEvents, setMyEvents] = useState(events);
 
+  const onDropFromTheOutside = ({ start, end, allDay: isAllDay }) => {
+    //dropfromtheoutside
+  }
+
   const onEventResize = ({ event, start, end }) => {
     setMyEvents(prev => {
       const existing = prev.find(ev => ev.id === event.id) ?? {}
@@ -81,7 +85,7 @@ const ReactCalendar = () => {
       onEventDrop={onEventDrop}
       onEventResize={onEventResize}
       resizable
-      style={{ height: 500 }}
+      style={{ height: 500, width: "100%" }}
     />
   );
 
