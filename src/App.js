@@ -1,24 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import ListTodo from './components/ListTodo';
+import ReactCalendar from './components/ReactCalendar';
+
+/* https://jquense.github.io/react-big-calendar/examples/index.html?path=/docs/addons-drag-and-drop--example-3 */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ListTodo />
+      <ReactCalendar />
+    </>
   );
 }
 
